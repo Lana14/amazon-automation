@@ -5,8 +5,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import pageobjects.HomePage;
 
 import java.util.concurrent.TimeUnit;
+
+import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
 
@@ -32,7 +36,7 @@ public class BaseTest {
     public void openHomePage() {
 
         // 1. Open amazon page
-        driver.get(URL);
+        open("/");
     }
 
     @AfterTest(alwaysRun = true)
@@ -40,5 +44,14 @@ public class BaseTest {
 
         // 6. Close driver's session
         driver.close();
+    }
+
+    @Test
+    public void signTest() {
+        open("/");
+        new HomePage()
+                .clickOnSignIn()
+                .setUsername("")
+                .setPassword("");
     }
 }
