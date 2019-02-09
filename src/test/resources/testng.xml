@@ -1,21 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Smoke" >
-    <groups>
-        <run>
-            <include name="smoke" />
-        </run>
-    </groups>
+    <!--<groups>-->
+        <!--<run>-->
+            <!--<include name="smoke" />-->
+        <!--</run>-->
+    <!--</groups>-->
 
-    <test name="Search test" >
-        <classes>
-            <class name="ua.startit.SearchTest" />
-        </classes>
-    </test>
+    <!--<test name="Search test" >-->
+        <!--<classes>-->
+            <!--<class name="ua.startit.SearchTest" />-->
+        <!--</classes>-->
+    <!--</test>-->
 
     <test name="Sign up test">
         <classes>
             <class name="ua.startit.SignUpTest"/>
+            <class name="ua.startit.SignInTest"/>
         </classes>
     </test>
 </suite>
