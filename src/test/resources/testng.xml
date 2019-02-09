@@ -6,7 +6,7 @@
             <include name="smoke" />
         </run>
     </groups>
-    
+
     <test name="Search test" >
         <classes>
             <class name="ua.startit.SearchTest" />
