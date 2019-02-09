@@ -8,6 +8,7 @@ public class SignInPage {
 
     private By name = By.id("ap_email");
     private By password = By.id("ap_password");
+    private By submit = By.id("signInSubmit");
     private By signUpButton = By.id("auth-create-account-link");
 
     public SignInPage setUsername(String username) {
@@ -18,6 +19,11 @@ public class SignInPage {
     public SignInPage setPassword(String userpassword) {
         $(password).setValue(userpassword);
         return this;
+    }
+
+    public HomePage submit() {
+        $(submit).click();
+        return new HomePage();
     }
 
     public SignUpPage signUp() {

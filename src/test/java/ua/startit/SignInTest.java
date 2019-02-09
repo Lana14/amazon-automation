@@ -1,11 +1,10 @@
 package ua.startit;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ua.startit.pageobjects.HomePage;
 
-import static com.codeborne.selenide.Selenide.open;
-import static ua.startit.SignUpTest.EMAIL_ADDRESS;
-import static ua.startit.SignUpTest.PASSWORD;
+import static ua.startit.SignUpTest.*;
 
 public class SignInTest extends BaseTest {
 
@@ -15,13 +14,15 @@ public class SignInTest extends BaseTest {
     // 4. Click on Sign in button
     // 5. Observe page (Assert)
 
-    @Test
+    @Test ()
     public void signTest() {
-        open("/");
-        new HomePage()
+        HomePage homePage = new HomePage();
+        homePage
                 .clickOnSignIn()
                 .setUsername(EMAIL_ADDRESS)
                 .setPassword(PASSWORD);
-    }
+
+     Assert.assertTrue(homePage.isNameDisplayed(FIRST_NAME),
+            "Welcome!");
 
 }
