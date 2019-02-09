@@ -19,11 +19,11 @@ public class SignInTest extends BaseTest {
         HomePage homePage = new HomePage();
         homePage
                 .clickOnSignIn()
-                .setUsername(EMAIL_ADDRESS)
-                .setPassword(PASSWORD);
+                .setEmail(formattedEmailAddress)
+                .setPassword(PASSWORD)
+                .submit();
 
         Assert.assertTrue(homePage.isNameDisplayed(FIRST_NAME),
                 "Welcome!");
-
     }
 }

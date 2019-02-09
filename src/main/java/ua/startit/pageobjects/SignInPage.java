@@ -6,18 +6,18 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SignInPage {
 
-    private By name = By.id("ap_email");
+    private By email = By.id("ap_email");
     private By password = By.id("ap_password");
     private By submit = By.id("signInSubmit");
     private By signUpButton = By.id("auth-create-account-link");
 
-    public SignInPage setUsername(String username) {
-        $(name).setValue(username);
+    public SignInPage setEmail(String userEmail) {
+        $(email).setValue(userEmail);
         return this;
     }
 
-    public SignInPage setPassword(String userpassword) {
-        $(password).setValue(userpassword);
+    public SignInPage setPassword(String userPassword) {
+        $(password).setValue(userPassword);
         return this;
     }
 

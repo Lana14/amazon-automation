@@ -22,7 +22,7 @@ public class SignUpTest extends BaseTest {
     private static final String LAST_NAME = "MyLastName";
     private static final String USERNAME = FIRST_NAME + " " + LAST_NAME;
     public static final String PASSWORD = "MyPassword";
-    public static final String EMAIL_ADDRESS = "verify1412+%s@gmail.com";
+    private static final String EMAIL_ADDRESS = "verify1412+%s@gmail.com";
 
     static String formattedEmailAddress;
 
@@ -58,7 +58,7 @@ public class SignUpTest extends BaseTest {
     }
 
     private String getCode(String uuid) throws InterruptedException, MailIsNotReceivedException {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         List<Email> emailsList = emailService.fetch();
         for (Email email : emailsList) {
             List<String> emailTo = email.getTo();
