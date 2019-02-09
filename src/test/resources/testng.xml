@@ -13,7 +13,7 @@
         <!--</classes>-->
     <!--</test>-->
 
-    <test name="Sign up test">
+    <test name="Sign up and Sign in">
         <classes>
             <class name="ua.startit.SignUpTest"/>
             <class name="ua.startit.SignInTest"/>

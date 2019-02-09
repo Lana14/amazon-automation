@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import ua.startit.pageobjects.HomePage;
 
 import static com.codeborne.selenide.Selenide.open;
+import static ua.startit.SignUpTest.EMAIL_ADDRESS;
+import static ua.startit.SignUpTest.PASSWORD;
 
 public class SignInTest extends BaseTest {
 
@@ -18,8 +20,8 @@ public class SignInTest extends BaseTest {
         open("/");
         new HomePage()
                 .clickOnSignIn()
-                .setUsername("")
-                .setPassword("");
+                .setUsername(EMAIL_ADDRESS)
+                .setPassword(PASSWORD);
     }
 
 }

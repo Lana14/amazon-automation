@@ -21,8 +21,8 @@ public class SignUpTest extends BaseTest {
     private static final String FIRST_NAME = "MyFirstName";
     private static final String LAST_NAME = "MyLastName";
     private static final String USERNAME = FIRST_NAME + " " + LAST_NAME;
-    private static final String PASSWORD = "MyPassword";
-    private static final String EMAIL_ADDRESS = "verify1412+%s@gmail.com";
+    public static final String PASSWORD = "MyPassword";
+    public static final String EMAIL_ADDRESS = "verify1412+%s@gmail.com";
 
     private EmailService emailService;
 
