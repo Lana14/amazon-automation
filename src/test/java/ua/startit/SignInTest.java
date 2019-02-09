@@ -14,7 +14,7 @@ public class SignInTest extends BaseTest {
     // 4. Click on Sign in button
     // 5. Observe page (Assert)
 
-    @Test ()
+    @Test()
     public void signTest() {
         HomePage homePage = new HomePage();
         homePage
@@ -22,7 +22,8 @@ public class SignInTest extends BaseTest {
                 .setUsername(EMAIL_ADDRESS)
                 .setPassword(PASSWORD);
 
-     Assert.assertTrue(homePage.isNameDisplayed(FIRST_NAME),
-            "Welcome!");
+        Assert.assertTrue(homePage.isNameDisplayed(FIRST_NAME),
+                "Welcome!");
 
+    }
 }
